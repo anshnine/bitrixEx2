@@ -14,8 +14,8 @@
 ## Первый раз на этом ПК
 
 ```bash
-git clone <URL-репозитория> BitrizExam2
-cd BitrizExam2
+git clone git@github.com:anshnine/bitrixEx2.git
+cd bitrixEx2
 ```
 
 Скопируй `local/` на сервер или в полную установку Bitrix.
@@ -36,9 +36,11 @@ git push
 2. В корне проекта:
 
 ```bash
-git remote add origin git@github.com:USER/BitrizExam2.git
+git remote add origin git@github.com:anshnine/bitrixEx2.git
 git push -u origin main
 ```
+
+Remote уже добавлен в этом проекте. Если push не идёт — настрой SSH: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 SSH-ключ: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
