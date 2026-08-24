@@ -8,6 +8,7 @@
 |------|------------|
 | `local/` | `init.php`, шаблон `ex2_type4` |
 | `EXAM2_GUIDE.md` | Шпаргалка по билету |
+| `CURSOR_PROMPT.md` | **Промпт для Cursor на другом ПК** |
 | `.cursor/rules/` | Правила для Cursor |
 | `Ex21_TrainingMaterials/` | Материалы билета |
 
