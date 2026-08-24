@@ -1,0 +1,37 @@
+---
+description: Bitrix exam — только D7 API, без legacy CIBlock/CUser/CEventLog
+globs: local/**/*.php
+alwaysApply: true
+---
+
+# Bitrix: только D7
+
+Проект — экзамен «1С-Битрикс: Управление сайтом». **Весь PHP-код и гайды — только D7.**
+
+## Запрещено в коде
+
+- `CIBlock*`, `CUser`, `CEventLog`, `CEvent`, `COption`, `CAgent`
+- `AddEventHandler()` — только `EventManager::getInstance()->addEventHandler()`
+
+## Использовать
+
+| Задача | D7 |
+|--------|-----|
+| События | `Bitrix\Main\EventManager` |
+| ИБ / элементы | `IblockTable`, `Element{ApiCode}Table` (`Rev`, `status`) |
+| Пользователи | `Bitrix\Main\UserTable` |
+| Журнал | `Bitrix\Main\EventLog\Internal\EventLogTable::add()` |
+| Опции | `Bitrix\Main\Config\Option::get()` / `::set()` |
+| Почта | `Bitrix\Main\Mail\Event::send()` |
+| Свойства ИБ в query | `'AUTHOR_VALUE' => 'AUTHOR.VALUE'`, фильтр → `whereIn()` |
+| Модули | `Bitrix\Main\Loader::includeModule()` |
+
+## Исключение
+
+События `iblock` / `main` / `search` передают `&$arFields` (legacy-массив) — это контракт ядра.  
+Данные из БД — **только ORM**. Отмена сохранения ИБ: `$APPLICATION->ThrowException()` + `return false`.
+
+## API-коды билета
+
+- Рецензии: `Rev` → `ElementRevTable`
+- Статусы: `status` → `ElementStatusTable`

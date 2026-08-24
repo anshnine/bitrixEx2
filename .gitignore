@@ -1,0 +1,27 @@
+# Bitrix core & runtime
+/bitrix/
+/upload/
+
+# Secrets
+/.settings.php
+/bitrix/.settings.php
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & debug
+*.log
+debug.log
+/local/php_interface/debug.log
+
+# Cache (if any outside bitrix/)
+/cache/
+
+# Local env overrides
+.env
+.env.local
