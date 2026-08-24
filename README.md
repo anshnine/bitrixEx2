@@ -31,20 +31,12 @@ git push
 
 На другом ПК: `git pull`
 
-## Подключить GitHub (один раз)
+## GitHub
 
-1. Создай **приватный** репозиторий на GitHub.
-2. В корне проекта:
-
-```bash
-git remote add origin git@github.com:anshnine/bitrixEx2.git
-git push -u origin main
-```
-
-Remote уже добавлен в этом проекте. Если push не идёт — настрой SSH: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+Remote: `git@github.com:anshnine/bitrixEx2.git`
 
 SSH-ключ: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
 
 ## Cursor
 
-Новый чат → `@EXAM2_GUIDE.md` или `@local/php_interface/init.php`
+Новый чат → `@CURSOR_PROMPT.md` `@EXAM2_GUIDE.md`
